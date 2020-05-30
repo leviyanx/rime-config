@@ -1,3 +1,5 @@
 # This is my cross-platform rime configration
 
-test
+Item
+- 双拼
+- 符号
