@@ -8,4 +8,5 @@ import_tables:
   - luna_pinyin
   - luna_pinyin.computer
   - luna_pinyin.diet
+  - luna_pinyin.maths
 ...
