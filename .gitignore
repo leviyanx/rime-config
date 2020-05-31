@@ -1,7 +1,9 @@
-/*
-/*/
+build
+luna_pinyin.userdb
+sync
 
-!double_pinyin.custom.yaml
-!symbols.yaml
-!README.md
-!.gitignore
+installation.yaml
+user.yaml
+
+# weasel
+weasel.custom.yaml
