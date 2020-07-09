@@ -1,0 +1,13 @@
+---
+name: luna_pinyin.extended
+version: "1.0"
+sort: by_weight
+use_preset_vocabulary: true
+# 此处为扩充词库（基本）默认链接载入的词库
+import_tables:
+  - luna_pinyin
+  - pinyin.computer
+  - pinyin.diet
+  - pinyin.maths
+#  - easy_en（移动端使用）
+...
