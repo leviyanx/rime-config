@@ -9,5 +9,5 @@ import_tables:
   - pinyin.computer
   - pinyin.diet
   - pinyin.maths
-#  - easy_en（移动端使用）
+#  - easy_en #（移动端使用）
 ...
