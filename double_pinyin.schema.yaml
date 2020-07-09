@@ -40,7 +40,7 @@ engine:
     - punct_segmentor
     - fallback_segmentor
   translators:
-    - lua_translator@date_translator
+    - lua_translator@date_translator # only valid in pc
     - punct_translator
     - reverse_lookup_translator
     - script_translator
