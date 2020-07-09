@@ -7,4 +7,4 @@ patch:
       punct: '^/([A-Z|a-z]*|[0-9]|10)$'
 
   translator:
-    dictionary: luna_pinyin.extended # extend dictionary
+    dictionary: double_pinyin.extended # extend dictionary
