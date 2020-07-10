@@ -9,5 +9,4 @@ import_tables:
   - dict.pinyin.computer
   - dict.pinyin.diet
   - dict.pinyin.maths
-#  - dict.en.easy_en #（移动端使用）
 ...
