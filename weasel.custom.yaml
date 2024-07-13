@@ -12,3 +12,6 @@ patch:
 
   preset_color_schemes/+:
     __include: weasel_style:/preset_color_schemes
+  
+  app_options/+:
+    __include: weasel_style:/app_options

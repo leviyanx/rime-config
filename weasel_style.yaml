@@ -127,19 +127,27 @@ preset_color_schemes:
 
 # 为特定的应用单独设定选项
 app_options:
-  app_options/Code.exe:
-    ascii_mode: true # 英文模式
-  app_options/gvim.exe:
+  # terminal
+  cmd.exe:               # 带 .exe 的进程名：Weasel 15.0 及之前版本须小写; PR #1049 合并后释出的版本大小写不敏感
+    ascii_mode: true     # 英文模式
+  windowsterminal.exe:   # terminal
     ascii_mode: true
-  app_options/cmder.exe:
+  powershell.exe:
     ascii_mode: true
-  app_options/conemu64.exe: # cmder 真身
+  Termius.exe:
     ascii_mode: true
-  app_options/cmd.exe:
+  # vim
+  nvim-qt.exe:
     ascii_mode: true
-  app_options/bash.exe:
+    vim_mode: true       # vim 模式, Esc <C-c> <C-[> 切换到 ascii 状态
+  # code
+  Code.exe:              # vscode
     ascii_mode: true
-  app_options/powershell.exe:
+  idea64.exe:
+    ascii_mode: true
+  goland64.exe:
+    ascii_mode: true
+  pycharm64.exe:
     ascii_mode: true
 
 # 以下是一个示例方案
