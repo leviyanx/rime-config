@@ -8,10 +8,10 @@
 ## 一、开启的输入方案与功能
 
 - 小鹤双拼+辅码（辅码方案：[ridical-pinyin](https://github.com/mirtlecn/rime-radical-pinyin)）
-- 双拼V键输入符号/表情
+- Tab、Shift+Tab组合可以按字跳转光标；Shift+BackSpace可以删除单个汉字的拼音
+- 双拼V键触发输入符号/表情
 - 日期（date）、时间（time）、农历（lunar）快捷输入
 - 以词定字
-- Tab切换光标
 
 ## 二、下载与使用配置的方法
 
