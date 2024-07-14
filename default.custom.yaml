@@ -2,6 +2,6 @@ patch:
   schema_list:
     - {schema: double_pinyin_flypy}
   menu:
-    page_size: 9
+    page_size: 5
   # caps_lock切换中英且禁用了切换大写，另外还禁用了shift的切换中英
   # ascii_composer/good_old_caps_lock: false  # true | false
