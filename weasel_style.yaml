@@ -19,17 +19,17 @@ style:
   label_format: "%s"
   inline_preedit: true
   font_face: "Segoe UI Emoji:80, Microsoft YaHei" # 默认字体。为了保证部分 emoji 能正常显示，建议将 emoji 字体放在首位，并指定起始码位防止影响其他字符。refer <https://github.com/rime/weasel/issues/932>
-  font_point: 13
+  font_point: 12
   label_font_point: 10
   comment_font_point: 10
   horizontal: true
-  color_scheme: wechat_light
-  color_scheme_dark: wechat_dark
+  color_scheme: win11light
+  color_scheme_dark: win11dark
   layout:
     min_width: 10
-    margin_x: 16
-    margin_y: 8
-    border: 2
+    margin_x: 14
+    margin_y: 7
+    border: 0
     spacing: 20
     candidate_spacing: 22
     hilite_spacing: 6
@@ -38,6 +38,8 @@ style:
     corner_radius: 10
     round_corner: 8
     shadow_radius: 8
+    shadow_offset_x: 3
+    shadow_offset_y: 3
 
 
 # 全部 color_schemes 选项，点击小狼毫「输入法设定」可以预览皮肤效果
@@ -46,84 +48,54 @@ style:
 # [RIME 西米](https://fxliang.github.io/RimeSeeMe/)
 
 preset_color_schemes:
-  wechat_light:
-    name: 微信键盘浅色
-    text_orientation: horizontal              # 候选文字
-    candidate_list_layout: linear             # 候选列表横排
-    back_color: 0xFFFFFF                      # 候选条背景色
-    border_height: 0                          # 窗口上下高度，大于圆角半径才生效
-    border_width: 8                           # 窗口左右宽度，大于圆角半径才生效
-    candidate_format: "%c %@ "                # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间
-    comment_text_color: 0x999999              # 拼音等提示文字颜色
-    corner_radius: 5                          # 窗口圆角
-    hilited_corner_radius: 5                  # 高亮圆角
-    font_face: PingFangSC                     # 候选词字体
-    font_point: 16                            # 候选字大小
-    hilited_candidate_back_color: 0x75B100    # 第一候选项背景色
-    hilited_candidate_text_color: 0xFFFFFF    # 第一候选项文字颜色
-    label_font_point: 12                      # 候选编号大小
-    text_color: 0x424242                      # 拼音行文字颜色
-    inline_preedit: true                      # 拼音位于： 候选框 false | 行内 true
+  # win11配色来自：https://github.com/fxliang/weasel_config/blob/main/color_schemes.yaml 为啥这个输入有重点 这个输入不用重点突出吧
+  win11light:
+    name: " Win11浅色/ Win11light"
+    author: fxliang
+    # 默认配色
+    comment_text_color:               0x666666
+    text_color:                       0x777777
+    label_color:                      0x1a1a1a
+    back_color:                       0xf9f9f9
+    border_color:                     0x009e5a00
+    shadow_color:                     0x20000000
+    # 普通候选配色
+    candidate_back_color:             0x2ff9f9f9
+    candidate_text_color:             0x3a3a3a
+    # 编码区域颜色
+    hilited_text_color:               0x3a3a3a
+    hilited_back_color:               0x1ff9f9f9
+    # 选中的候选区域配色
+    hilited_mark_color:               0x9e5a00
+    hilited_label_color:              0x1a1a1a
+    hilited_comment_text_color:       0x1a1a1a
+    hilited_candidate_text_color:     0x3a3a3a
+    hilited_candidate_back_color:     0xf0f0f0
 
-  wechat_dark:
-    name: 微信键盘深色
-    text_orientation: horizontal              # 候选文字
-    candidate_list_layout: linear             # 候选列表横排
-    back_color: 0x2e2925                      # 候选条背景色
-    border_height: 0                          # 窗口上下高度，大于圆角半径才生效
-    border_width: 8                           # 窗口左右宽度，大于圆角半径才生效
-    candidate_format: "%c %@ "                # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间
-    comment_text_color: 0x999999              # 拼音等提示文字颜色
-    corner_radius: 5                          # 窗口圆角
-    hilited_corner_radius: 5                  # 高亮圆角
-    hilited_candidate_back_color: 0x75B100    # 第一候选项背景色
-    hilited_candidate_text_color: 0xFFFFFF    # 第一候选项文字颜色
-    text_color: 0x424242                      # 拼音行文字颜色
-    label_color: 0x999999                     # 预选栏编号颜色
-    candidate_text_color: 0xe9e9ea            # 预选项文字颜色
-    inline_preedit: true                      # 拼音位于： 候选框 false | 行内 true
+  win11dark:
+    name: "Win11暗色 / Win11Dark"
+    author: fxliang
+    # 默认配色
+    text_color:                       0xf9f9f9
+    label_color:                      0xf9f9f9
+    comment_text_color:               0xf9f9f9
+    back_color:                       0x222222
+    border_color:                     0x00202020
+    shadow_color:                     0x20000000
+    # 普通候选颜色
+    candidate_back_color:             0x00000000
+    candidate_text_color:             0xf9f9f9
+    # 编码区域颜色
+    hilited_back_color:               0x383838
+    hilited_text_color:               0xf9f9f9
+    # 选中的候选区域配色
+    hilited_mark_color:               0xf7be6d
+    hilited_label_color:              0xf9f9f9
+    hilited_comment_text_color:       0xf9f9f9
+    hilited_candidate_text_color:     0xf9f9f9
+    hilited_candidate_border_color:   0x00000000
+    hilited_candidate_back_color:     0x383838
 
-  mac_light:
-    name: Mac浅色
-    text_orientation: horizontal              # 候选文字
-    candidate_list_layout: linear             # 候选列表横排
-    candidate_format: "%c %@ "   # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间
-    corner_radius: 5                             # 窗口圆角
-    hilited_corner_radius: 5                     # 高亮圆角
-    line_spacing: 10                             # 行间距(适用于竖排)
-    border_height: 4                             # 窗口上下高度，大于圆角半径才生效
-    border_width: 4                              # 窗口左右宽度，大于圆角半径才生效
-    text_color: 0x424242                    # 拼音行文字颜色
-    back_color: 0xFFFFFF                    # 候选条背景色
-    label_color: 0x999999                   # 预选栏编号颜色
-    candidate_text_color: 0x3c3c3c          # 预选项文字颜色
-    comment_text_color: 0x999999            # 拼音等提示文字颜色
-    hilited_text_color: 0x999999            # 高亮拼音 (需要开启内嵌编码)
-    hilited_back_color: 0xD75A00            # 第一候选项背景背景色
-    hilited_candidate_text_color: 0xFFFFFF  # 第一候选项文字颜色
-    hilited_candidate_label_color: 0xFFFFFF # 第一候选项编号颜色
-    hilited_comment_text_color: 0x999999    # 注解文字高亮
-
-  mac_dark:
-    name: Mac深色
-    text_orientation: horizontal              # 候选文字
-    candidate_list_layout: linear             # 候选列表横排
-    candidate_format: "%c %@ "   # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间
-    corner_radius: 5                             # 窗口圆角
-    hilited_corner_radius: 5                     # 高亮圆角
-    line_spacing: 10                              # 行间距(适用于竖排)
-    border_height: 4                             # 窗口上下高度，大于圆角半径才生效
-    border_width: 4                              # 窗口左右宽度，大于圆角半径才生效 
-    text_color: 0x424242                    # 拼音行文字颜色
-    back_color: 0x252a2e                    # 候选条背景色
-    label_color: 0x999999                   # 预选栏编号颜色
-    candidate_text_color: 0xe9e9ea          # 预选项文字颜色
-    comment_text_color: 0x999999            # 拼音等提示文字颜色
-    hilited_text_color: 0x999999            # 高亮拼音 (需要开启内嵌编码)
-    hilited_back_color: 0xD75A00            # 第一候选项背景背景色
-    hilited_candidate_text_color: 0xFFFFFF  # 第一候选项文字颜色
-    hilited_candidate_label_color: 0xFFFFFF # 第一候选项编号颜色
-    hilited_comment_text_color: 0x999999    # 注解文字高亮1
 
 # 为特定的应用单独设定选项
 app_options:
