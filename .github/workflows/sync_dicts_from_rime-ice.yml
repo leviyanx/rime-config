@@ -1,0 +1,50 @@
+name: Sync dicts from rime-ice
+
+on:
+  schedule:
+    - cron: '30 18 * * 2,4,6' # 每周二、四、六 18:30执行一次
+
+jobs:
+  sync-dicts:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout main repository
+      uses: actions/checkout@v3
+      with:
+        path: 'main-repo'
+
+    - name: Checkout iDvel/rime-ice repository
+      uses: actions/checkout@v3
+      with:
+        repository: 'iDvel/rime-ice'
+        path: 'rime-ice-repo'
+
+    - name: Check for updates in cn_dicts
+      run: |
+        if ! diff -r main-repo/cn_dicts rime-ice-repo/cn_dicts; then
+          echo "Updates detected, syncing cn dicts..."
+          # Sync directories
+          cp -r rime-ice-repo/cn_dicts main-repo/cn_dicts
+          cd main-repo
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add cn_dicts
+          git commit -m 'Update cn_dicts from iDvel/rime-ice'
+          git push
+        else
+          echo "No updates found in cn dicts."
+
+    - name: Check for updates in en_dicts
+      run: |
+        if ! diff -r main-repo/en_dicts rime-ice-repo/en_dicts; then
+          echo "Updates detected, syncing en dicts..."
+          # Sync directories
+          cp -r rime-ice-repo/en_dicts main-repo/en_dicts
+          cd main-repo
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add cn_dicts
+          git commit -m 'Update cn_dicts from iDvel/rime-ice'
+          git push
+        else
+          echo "No updates found in en_dicts."
