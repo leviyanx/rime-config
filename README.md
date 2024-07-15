@@ -61,6 +61,15 @@ Win：
 1. 修改好`./scripts/win`下两个文件中的路径：用户文件夹、程序路径以及bat脚本的路径。
 2. vbe脚本配合win的`任务计划程序`实现自动化（具体操作可见[参考](#参考)中视频的第一条）。
 
+Mac：
+
+1. 通过`crontab -e`设置定时执行脚本（如下，每5小时执行一次）
+   ```bash
+   0 */5 * * * /bin/bash $HOME/Library/Rime/scripts/mac/updateSettingsAndSync.sh
+   ```
+- 注：此脚本会检测输入法是否在使用中（cpu使用率是否为0），如果在使用中则不会执行重新部署与同步用户数据的操作。
+
+
 ## 参考
 
 视频：
