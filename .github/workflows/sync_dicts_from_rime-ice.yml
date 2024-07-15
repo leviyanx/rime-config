@@ -34,6 +34,7 @@ jobs:
           git push
         else
           echo "No updates found in cn dicts."
+        fi
 
     - name: Check for updates in en_dicts
       run: |
@@ -49,3 +50,4 @@ jobs:
           git push
         else
           echo "No updates found in en_dicts."
+        fi
