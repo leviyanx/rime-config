@@ -59,7 +59,7 @@
 Win：
 
 1. 修改好`./scripts/win`下两个文件中的路径：用户文件夹、程序路径以及bat脚本的路径。
-2. vbe脚本配合win的`任务计划程序`实现自动化（具体操作可见[参考](#参考)中视频的第一条）。
+2. vbe脚本配合win的`任务计划程序`实现自动化（具体操作可见此[视频][【Rime自动化：自动更新配置、词库、部署、同步用户词】]）。
 
 Mac：
 
@@ -67,11 +67,10 @@ Mac：
    ```bash
    0 */5 * * * /bin/bash $HOME/Library/Rime/scripts/mac/updateSettingsAndSync.sh
    ```
-- 注：此脚本会检测输入法是否在使用中（cpu使用率是否为0），如果在使用中则不会执行重新部署与同步用户数据的操作。
+- 脚本参考了这个[issue][无法通过命令自动同步字典配置]。
+- 注：此脚本会检测输入法是否在使用中（不使用时cpu占用率一般小于0.5），如果在使用中则不会执行重新部署与同步用户数据的操作。
 
 
-## 参考
 
-视频：
-
-1. [【Rime自动化：自动更新配置、词库、部署、同步用户词】]( https://www.bilibili.com/video/BV1Am41167B9/?share_source=copy_web&vd_source=7bb910c4747384efecba3166ead658de)
+[【Rime自动化：自动更新配置、词库、部署、同步用户词】]:  https://www.bilibili.com/video/BV1Am41167B9/?share_source=copy_web&vd_source=7bb910c4747384efecba3166ead658de
+[无法通过命令自动同步字典配置]: https://github.com/rime/squirrel/issues/421
