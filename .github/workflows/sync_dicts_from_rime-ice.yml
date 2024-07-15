@@ -3,7 +3,7 @@ name: Sync dicts from rime-ice
 on:
   workflow_dispatch: # 手动触发
   schedule:
-    - cron: '30 18 * * 2,4,6' # 每周二、四、六 18:30执行一次
+    - cron: '30 6,18 15 * *' # 每月15号的6:30、18:30执行一次
 
 jobs:
   sync-dicts:
@@ -45,9 +45,25 @@ jobs:
           cd main-repo
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add cn_dicts
+          git add en_dicts
           git commit -m 'Update cn_dicts from iDvel/rime-ice'
           git push
         else
           echo "No updates found in en_dicts."
+        fi
+        
+    - name: Check for updates in opencc dicts
+      run: |
+        if ! diff -r main-repo/opencc rime-ice-repo/opencc; then
+          echo "Updates detected, syncing opencc dicts..."
+          # Sync directories
+          cp -r rime-ice-repo/opencc main-repo/opencc
+          cd main-repo
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add opencc
+          git commit -m 'Update opencc dicts from iDvel/rime-ice'
+          git push
+        else
+          echo "No updates found in opencc dicts."
         fi
