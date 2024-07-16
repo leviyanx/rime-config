@@ -12,3 +12,5 @@ patch:
       underscore: "^[A-Za-z]+_.*"  # 下划线不上屏
       url_2: "^[A-Za-z]+[.].*"   # 句号不上屏，支持 google.com abc.txt 等网址或文件名，使用句号翻页时需要注释掉
       colon: "^[A-Za-z]+:.*"     # 冒号不上屏
+      slash: "^[A-Za-z]+/.*"     # 斜杠不上屏，方便输入完整网址
+      
