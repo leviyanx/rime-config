@@ -104,10 +104,12 @@ app_options:
     ascii_mode: true     # 英文模式
   windowsterminal.exe:   # terminal
     ascii_mode: true
+    vim_mode: true
   powershell.exe:
     ascii_mode: true
   Termius.exe:
     ascii_mode: true
+    vim_mode: true
   # vim
   nvim-qt.exe:
     ascii_mode: true
@@ -115,12 +117,16 @@ app_options:
   # code
   Code.exe:              # vscode
     ascii_mode: true
+    vim_mode: true
   idea64.exe:
     ascii_mode: true
+    vim_mode: true
   goland64.exe:
     ascii_mode: true
+    vim_mode: true
   pycharm64.exe:
     ascii_mode: true
+    vim_mode: true
 
 # 以下是一个示例方案
 # 使用方法：在 weasel.custom.yaml 中添加如下两行：
