@@ -2,7 +2,7 @@ patch:
   schema_list:
     - {schema: double_pinyin_flypy}
   menu:
-    page_size: 7
+    page_size: 9
   # 处理符合特定规则的输入码，如网址、反查
   # 此处配置较为通用的选项，各方案中另增加了和方案功能绑定的 patterns。
   recognizer:
@@ -13,4 +13,3 @@ patch:
       url_2: "^[A-Za-z]+[.].*"   # 句号不上屏，支持 google.com abc.txt 等网址或文件名，使用句号翻页时需要注释掉
       colon: "^[A-Za-z]+:.*"     # 冒号不上屏
       slash: "^[A-Za-z]+/.*"     # 斜杠不上屏，方便输入完整网址
-      
