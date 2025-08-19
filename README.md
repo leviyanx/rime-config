@@ -7,7 +7,7 @@
 
 **注：cn_dicts、en_dicts和opencc词库跟踪[雾凇拼音仓库](https://github.com/iDvel/rime-ice)的更新**（基于Github Action，每月自动检查一次词库是否更新，如果更新则本仓库的词库同步更新）。
 
-## 一、开启的输入方案与功能
+## 一、输入方案与实用功能
 
 输入方案
 
@@ -29,10 +29,11 @@
    3. 网址/文件名：句号不上屏，支持 `google.com` `abc.txt` 等网址或文件名
    4. 下划线不上屏（**输入英文**才能触发），如sync_dir 
 
-## 二、下载与使用配置的方法
+## 二、快速使用
 
 1. 在Mac/Win上安装好[Rime输入法](https://rime.im/)，设置好用户文件夹（settings）。
-2. 进入用户文件夹，git初始化仓库
+2. 删除默认生成的`default.custom.yaml`与`weasel.custom.yaml`(如果是squirrel，则是`squirrel.custom.yaml`)文件。
+3. 进入用户文件夹，git初始化仓库
    ```shell
    git init
    ```
@@ -47,10 +48,10 @@
 3. 将同步文件夹（sync_dir）内的下列文件复制到本文件夹内
    1. custom_phrase_double.txt
 4. `重新部署`。
-5. 修改installation.yaml文件，设置两项参数
+5. 修改installation.yaml文件内两项参数
    ```yaml
-   installation_id: "leviyanx-$unique_device_identifier"
-   sync_dir: "path/to/your/sync_dir"
+   installation_id: "leviyanx-$unique_device_identifier" # 同步目录名称
+   sync_dir: "path/to/your/sync_dir"                     # 同步目录的父目录
    ```
 6. `同步用户数据`。
 
