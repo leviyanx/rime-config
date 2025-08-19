@@ -127,6 +127,10 @@ app_options:
   pycharm64.exe:
     ascii_mode: true
     vim_mode: true
+  # text
+  Obsidian.exe:
+    ascii_mode: true
+    vim_mode: true
 
 # 以下是一个示例方案
 # 使用方法：在 weasel.custom.yaml 中添加如下两行：
