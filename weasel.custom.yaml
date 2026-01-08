@@ -7,12 +7,11 @@ customization:
 
 # weasel.custom.yaml
 patch:
+  "app_options/+":
+    __include: "weasel_style:/app_options"
+  "preset_color_schemes/+":
+    __include: "weasel_style:/preset_color_schemes"
   show_notifications: false
-  style/+:
-    __include: weasel_style:/style
-
-  preset_color_schemes/+:
-    __include: weasel_style:/preset_color_schemes
-  
-  app_options/+:
-    __include: weasel_style:/app_options
+  "style/+":
+    __include: "weasel_style:/style"
+  "style/color_scheme": google
