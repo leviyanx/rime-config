@@ -15,6 +15,8 @@
 # Weasel 版本：15.0 
 # Commit: 15f94f76967
 style:
+  # 候选词横排显示
+  horizontal: true
   # 字体设定
   label_format: "%s"
   inline_preedit: true
@@ -22,7 +24,7 @@ style:
   font_point: 12
   label_font_point: 10
   comment_font_point: 10
-  horizontal: true
+  # 样式
   color_scheme: win11light
   color_scheme_dark: win11dark
   layout:
