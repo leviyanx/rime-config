@@ -13,7 +13,20 @@ import_tables:
   - cn_dicts/others   # 一些杂项
 
   # 建议把扩展词库放到下面，有重复词条时，最上面的权重生效
-  # - cn_dicts/mydict
+  # 2026-01-10 添加扩展字库
+  - cn_dicts_ext/chinese_place
+  - cn_dicts_ext/chinese_university
+  - cn_dicts_ext/computer_science
+  - cn_dicts_ext/electricity
+  - cn_dicts_ext/machanical
+  - cn_dicts_ext/maths
+  - cn_dicts_ext/metallurgy
+  - cn_dicts_ext/traditional_chinese_medicine
+  - cn_dicts_ext/acupoint
+  - cn_dicts_ext/architecture
+  - cn_dicts_ext/chinese_distinct
+  - cn_dicts_ext/chinese_hospital
+  - cn_dicts_ext/chinese_institution
 ...
 
 # 按需启用：
