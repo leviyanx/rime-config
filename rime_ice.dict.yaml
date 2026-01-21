@@ -22,6 +22,7 @@ import_tables:
   - cn_dicts_ext/maths
   - cn_dicts_ext/metallurgy
   - cn_dicts_ext/traditional_chinese_medicine
+  - cn_dicts_ext/medicine
   - cn_dicts_ext/acupoint
   - cn_dicts_ext/architecture
   - cn_dicts_ext/chinese_distinct
