@@ -112,6 +112,9 @@ app_options:
   Termius.exe:
     ascii_mode: true
     vim_mode: true
+  mintty.exe:
+    ascii_mode: true
+    vim_mode: true
   # vim
   nvim-qt.exe:
     ascii_mode: true
