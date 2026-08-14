@@ -28,6 +28,7 @@ import_tables:
   - cn_dicts_ext/chinese_distinct
   - cn_dicts_ext/chinese_hospital
   - cn_dicts_ext/chinese_institution
+  - cn_dicts_ext/chinese_peotry
 ...
 
 # 按需启用：
