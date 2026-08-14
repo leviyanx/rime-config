@@ -132,10 +132,6 @@ app_options:
   pycharm64.exe:
     ascii_mode: true
     vim_mode: true
-  # text
-  Obsidian.exe:
-    ascii_mode: true
-    vim_mode: true
   devenv.exe:
     ascii_mode: true
     vim_mode: true
