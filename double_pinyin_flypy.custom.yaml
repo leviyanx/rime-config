@@ -1,0 +1,9 @@
+patch:
+  # 模糊音配置
+  "speller/algebra/+":
+    # en (f) <-> eng (g)
+    - derive/f$/g/
+    - derive/g$/f/
+    # in (b) <-> ing (k)
+    - derive/b$/k/
+    - derive/k$/b/
